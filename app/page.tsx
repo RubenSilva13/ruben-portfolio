@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, FileDown, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, FileDown, ArrowRight, Smartphone, Brain, Network, Globe } from "lucide-react";
 
 export default function Home() {
   return (
@@ -16,8 +16,7 @@ export default function Home() {
 
           <p className="text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
             Recém-licenciado em Engenharia Informática, com interesse em
-            desenvolvimento de software e na criação de soluções para
-            problemas reais.
+            desenvolvimento de software, aplicações móveis e análise de dados.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -51,7 +50,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/ruben-silva-048b953aa/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -61,7 +60,7 @@ export default function Home() {
             </a>
 
             <a
-              href="mailto:teuemail@gmail.com"
+              href="mailto:rubenmbs123@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >
@@ -83,12 +82,43 @@ export default function Home() {
 
         <p className="text-muted-foreground max-w-3xl leading-relaxed">
           Sou licenciado em Engenharia Informática pelo Instituto Politécnico
-          de Bragança. Ao longo da minha formação desenvolvi projetos em
-          diferentes áreas do desenvolvimento de software, trabalhando com
-          tecnologias como Java, Spring Boot, Python, React, SQL e C/C++.
-          Tenho especial interesse em desenvolvimento de software e gosto de
-          transformar problemas técnicos em soluções funcionais.
+          de Bragança. Ao longo do curso desenvolvi uma base sólida em
+          programação, redes e sistemas operativos, e aprendizagem automática.
+          O meu projeto final centrou-se na caracterização do sensor LiDAR de
+          dispositivos iOS, trabalho que deu origem a dois artigos científicos
+          submetidos a conferências internacionais. Tive ainda experiência
+          internacional através do programa Erasmus, na Croácia, e de um
+          programa BIP, na Lituânia. Procuro agora uma primeira oportunidade
+          onde possa aplicar e desenvolver estas competências.
         </p>
+      </section>
+
+      {/* ===== O QUE FAÇO ===== */}
+      <section id="areas" className="scroll-mt-24 space-y-8">
+        <h2 className="text-3xl font-bold">O que faço</h2>
+
+        <div className="grid gap-8 md:grid-cols-2">
+          {areas.map((area, i) => {
+            const Icone = area.icone;
+            return (
+              <div key={area.titulo} className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-3xl font-bold text-muted-foreground">
+                    0{i + 1}
+                  </span>
+                  <div className="rounded-full border p-3">
+                    <Icone className="h-5 w-5" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold">{area.titulo}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {area.descricao}
+                </p>
+                <div className="border-t pt-2" />
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {/* ===== PROJETOS ===== */}
@@ -158,7 +188,7 @@ export default function Home() {
         </p>
 
         <a
-          href="mailto:teuemail@gmail.com"
+          href="mailto:rubenmbs123@gmail.com"
           className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
         >
           <Mail className="mr-2 h-4 w-4" />
@@ -171,42 +201,72 @@ export default function Home() {
 
 /* ===== DADOS ===== */
 
+const areas = [
+  {
+    icone: Smartphone,
+    titulo: "Desenvolvimento Mobile & AR",
+    descricao:
+      "Aplicações iOS com Swift, SwiftUI e ARKit. Foi nesta área que desenvolvi o meu projeto final, uma app de captura e processamento de dados LiDAR.",
+  },
+  {
+    icone: Brain,
+    titulo: "Machine Learning & Análise de Dados",
+    descricao:
+      "Aprendizagem automática e análise de dados em Python, incluindo modelação e caracterização experimental de resultados.",
+  },
+  {
+    icone: Network,
+    titulo: "Redes & Sistemas",
+    descricao:
+      "Fundamentos de redes, sistemas operativos e administração de sistemas, com experiência em virtualização e self-hosting (Proxmox, VMware) e containers (Docker).",
+  },
+  {
+    icone: Globe,
+    titulo: "Desenvolvimento Web",
+    descricao:
+      "APIs REST com FastAPI e interfaces em React, com autenticação, gestão de dados e comunicação entre frontend e backend.",
+  },
+];
+
 const projetos = [
   {
-    titulo: "Aplicação iOS com LiDAR",
+    titulo: "Captura LiDAR em iOS",
     descricao:
-      "Aplicação iOS desenvolvida no projeto final de curso para aquisição e processamento de dados LiDAR, reconstrução espacial e digitalização de objetos.",
-    tecnologias: ["Swift", "ARKit", "RealityKit", "SwiftUI"],
-    link: "https://github.com/RubenSilva13",
+      "Aplicação iOS para captura de dados tridimensionais com o sensor LiDAR do iPhone, acompanhada de um pipeline de análise em Python que caracteriza a precisão do sensor em função da distância.",
+    tecnologias: ["Swift", "SwiftUI", "ARKit", "Python"],
+    link: "https://github.com/RubenSilva13/LiDAR-capture-ios",
   },
   {
-    titulo: "Sistema de Desenvolvimento Web",
+    titulo: "FastAPI Auth — Backend",
     descricao:
-      "Aplicação web desenvolvida com uma arquitetura baseada em frontend e backend, incluindo gestão de dados e comunicação através de APIs REST.",
-    tecnologias: ["Java", "Spring Boot", "MySQL", "REST"],
-    link: "https://github.com/RubenSilva13",
+      "API REST com autenticação JWT e gestão de tarefas, construída com FastAPI e MySQL.",
+    tecnologias: ["FastAPI", "Python", "MySQL", "JWT"],
+    link: "https://github.com/RubenSilva13/FastApi-Auth-Rest",
   },
   {
-    titulo: "Análise de Dados",
+    titulo: "FastAPI Auth — Frontend",
     descricao:
-      "Projeto de análise e processamento de dados utilizando técnicas de machine learning e ferramentas de análise em Python.",
-    tecnologias: ["Python", "Pandas", "NumPy", "Scikit-learn"],
-    link: "https://github.com/RubenSilva13",
+      "Frontend em React para uma API de autenticação e gestão de tarefas, com autenticação por JWT.",
+    tecnologias: ["React", "Tailwind CSS", "JavaScript", "JWT"],
+    link: "https://github.com/RubenSilva13/FastApi-Auth-React",
   },
 ];
 
 const competencias = [
-  "Java",
   "Python",
-  "C",
-  "C++",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Spring Boot",
-  "SQL",
-  "HTML & CSS",
-  "Git",
   "Swift",
+  "Java",
+  "SwiftUI",
   "ARKit",
+  "Machine Learning",
+  "C / C++",
+  "C#",
+  "JavaScript",
+  "React",
+  "FastAPI",
+  "SQL",
+  "Redes",
+  "Linux",
+  "Docker",
+  "Git",
 ];
