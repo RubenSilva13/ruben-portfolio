@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, FileDown, ArrowRight, Smartphone, Brain, Network, Globe } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -70,10 +71,16 @@ export default function Home() {
         </div>
 
         <div className="flex-shrink-0">
-          <div className="h-48 w-48 md:h-64 md:w-64 rounded-full bg-secondary flex items-center justify-center text-5xl font-bold text-muted-foreground">
-            RS
-          </div>
-        </div>
+  <div className="relative h-48 w-48 md:h-64 md:w-64 rounded-full overflow-hidden bg-secondary">
+    <Image
+      src="/foto.jpeg"
+      alt="Foto de Ruben Silva"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
       </section>
 
       {/* ===== SOBRE MIM ===== */}
