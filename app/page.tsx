@@ -1,16 +1,10 @@
-import {
-  Github,
-  Linkedin,
-  Mail,
-  FileDown,
-  ArrowRight,
-} from "lucide-react";
+import { Github, Linkedin, Mail, FileDown, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="container py-16 space-y-24">
       {/* ===== CABEÇALHO / HERO ===== */}
-      <section className="flex flex-col-reverse md:flex-row items-center gap-10">
+      <section id="inicio" className="scroll-mt-24 flex flex-col-reverse md:flex-row items-center gap-10">
         <div className="flex-1 space-y-6 text-center md:text-left">
           <p className="text-sm uppercase tracking-widest text-muted-foreground">
             Engenheiro Informático
@@ -84,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* ===== SOBRE MIM ===== */}
-      <section className="space-y-4">
+      <section id="sobre" className="scroll-mt-24 space-y-4">
         <h2 className="text-3xl font-bold">Sobre mim</h2>
 
         <p className="text-muted-foreground max-w-3xl leading-relaxed">
@@ -98,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* ===== PROJETOS ===== */}
-      <section className="space-y-8">
+      <section id="projetos" className="scroll-mt-24 space-y-8">
         <h2 className="text-3xl font-bold">Projetos</h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -139,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* ===== COMPETÊNCIAS ===== */}
-      <section className="space-y-6">
+      <section id="competencias" className="scroll-mt-24 space-y-6">
         <h2 className="text-3xl font-bold">Competências</h2>
 
         <div className="flex flex-wrap gap-3">
@@ -155,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* ===== CONTACTO ===== */}
-      <section id="contacto" className="space-y-4">
+      <section id="contacto" className="scroll-mt-24 space-y-4">
         <h2 className="text-3xl font-bold">Contacto</h2>
 
         <p className="text-muted-foreground max-w-2xl">
@@ -216,4 +210,3 @@ const competencias = [
   "Swift",
   "ARKit",
 ];
-
