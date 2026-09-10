@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, FileDown, ArrowRight, Smartphone, Brain, Network, Globe } from "lucide-react";
 import Image from "next/image";
+import ProjetosCarrossel from "@/components/projetos-carrossel";
 
 export default function Home() {
   return (
@@ -71,16 +72,16 @@ export default function Home() {
         </div>
 
         <div className="flex-shrink-0">
-  <div className="relative h-48 w-48 md:h-64 md:w-64 rounded-full overflow-hidden bg-secondary">
-    <Image
-      src="/foto.jpeg"
-      alt="Foto de Ruben Silva"
-      fill
-      className="object-cover"
-      priority
-    />
-  </div>
-</div>
+          <div className="relative h-48 w-48 md:h-64 md:w-64 rounded-full overflow-hidden bg-secondary">
+            <Image
+              src="/foto.jpeg"
+              alt="Foto de Ruben Silva"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
       </section>
 
       {/* ===== SOBRE MIM ===== */}
@@ -128,45 +129,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PROJETOS ===== */}
+      {/* ===== PROJETOS (CARROSSEL) ===== */}
       <section id="projetos" className="scroll-mt-24 space-y-8">
         <h2 className="text-3xl font-bold">Projetos</h2>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projetos.map((projeto) => (
-            <div
-              key={projeto.titulo}
-              className="rounded-xl border p-6 space-y-4 hover:border-primary transition-colors flex flex-col"
-            >
-              <h3 className="text-xl font-semibold">{projeto.titulo}</h3>
-
-              <p className="text-muted-foreground text-sm flex-1">
-                {projeto.descricao}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {projeto.tecnologias.map((tec) => (
-                  <span
-                    key={tec}
-                    className="text-xs rounded-full bg-secondary px-3 py-1"
-                  >
-                    {tec}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href={projeto.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm text-primary hover:underline"
-              >
-                Ver no GitHub
-                <Github className="ml-2 h-4 w-4" />
-              </a>
-            </div>
-          ))}
-        </div>
+        <ProjetosCarrossel />
       </section>
 
       {/* ===== COMPETÊNCIAS ===== */}
@@ -219,7 +185,7 @@ const areas = [
     icone: Brain,
     titulo: "Machine Learning & Análise de Dados",
     descricao:
-      "Aprendizagem automática e análise de dados em Python, incluindo modelação e caracterização experimental de resultados.",
+      "Aprendizagem automática e análise de dados em Python (NumPy, SciPy, Matplotlib), incluindo modelação e caracterização experimental de resultados.",
   },
   {
     icone: Network,
@@ -232,30 +198,6 @@ const areas = [
     titulo: "Desenvolvimento Web",
     descricao:
       "APIs REST com FastAPI e interfaces em React, com autenticação, gestão de dados e comunicação entre frontend e backend.",
-  },
-];
-
-const projetos = [
-  {
-    titulo: "Captura LiDAR em iOS",
-    descricao:
-      "Aplicação iOS para captura de dados tridimensionais com o sensor LiDAR do iPhone, acompanhada de um pipeline de análise em Python que caracteriza a precisão do sensor em função da distância.",
-    tecnologias: ["Swift", "SwiftUI", "ARKit", "Python"],
-    link: "https://github.com/RubenSilva13/LiDAR-capture-ios",
-  },
-  {
-    titulo: "FastAPI Auth — Backend",
-    descricao:
-      "API REST com autenticação JWT e gestão de tarefas, construída com FastAPI e MySQL.",
-    tecnologias: ["FastAPI", "Python", "MySQL", "JWT"],
-    link: "https://github.com/RubenSilva13/FastApi-Auth-Rest",
-  },
-  {
-    titulo: "FastAPI Auth — Frontend",
-    descricao:
-      "Frontend em React para uma API de autenticação e gestão de tarefas, com autenticação por JWT.",
-    tecnologias: ["React", "Tailwind CSS", "JavaScript", "JWT"],
-    link: "https://github.com/RubenSilva13/FastApi-Auth-React",
   },
 ];
 
