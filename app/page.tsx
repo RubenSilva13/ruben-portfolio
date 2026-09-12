@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail, FileDown, ArrowRight, Smartphone, Brain, Network, Globe } from "lucide-react";
 import Image from "next/image";
 import ProjetosCarrossel from "@/components/projetos-carrossel";
+import Competencias from "@/components/competencias";
 
 export default function Home() {
   return (
@@ -138,17 +139,7 @@ export default function Home() {
       {/* ===== COMPETÊNCIAS ===== */}
       <section id="competencias" className="scroll-mt-24 space-y-6">
         <h2 className="text-3xl font-bold">Competências</h2>
-
-        <div className="flex flex-wrap gap-3">
-          {competencias.map((competencia) => (
-            <span
-              key={competencia}
-              className="rounded-lg border px-4 py-2 text-sm font-medium"
-            >
-              {competencia}
-            </span>
-          ))}
-        </div>
+        <Competencias />
       </section>
 
       {/* ===== CONTACTO ===== */}
@@ -199,23 +190,4 @@ const areas = [
     descricao:
       "APIs REST com FastAPI e interfaces em React, com autenticação, gestão de dados e comunicação entre frontend e backend.",
   },
-];
-
-const competencias = [
-  "Python",
-  "Swift",
-  "Java",
-  "SwiftUI",
-  "ARKit",
-  "Machine Learning",
-  "C / C++",
-  "C#",
-  "JavaScript",
-  "React",
-  "FastAPI",
-  "SQL",
-  "Redes",
-  "Linux",
-  "Docker",
-  "Git",
 ];

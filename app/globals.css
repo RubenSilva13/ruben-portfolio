@@ -128,3 +128,10 @@
     @apply font-sans;
   }
 }
+
+/* Container centrado com margens laterais */
+@utility container {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 1.5rem;
+}
