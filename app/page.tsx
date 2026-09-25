@@ -6,20 +6,20 @@ import Competencias from "@/components/competencias";
 export default function Home() {
   return (
     <div className="container py-16 space-y-24">
-      {/* ===== CABEÇALHO / HERO ===== */}
+      {/* ===== HERO ===== */}
       <section id="inicio" className="scroll-mt-24 flex flex-col-reverse md:flex-row items-center gap-10">
         <div className="flex-1 space-y-6 text-center md:text-left">
           <p className="text-sm uppercase tracking-widest text-muted-foreground">
-            Engenheiro Informático
+            Software Engineer
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold">
-            Olá, sou o <span className="text-primary">Ruben Silva</span>
+            Hi, I&apos;m <span className="text-primary">Ruben Silva</span>
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
-            Recém-licenciado em Engenharia Informática, com interesse em
-            desenvolvimento de software, aplicações móveis e análise de dados.
+            Computer Engineering graduate with a strong interest in software
+            development, mobile applications and data analysis.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -29,14 +29,14 @@ export default function Home() {
               className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
             >
               <FileDown className="mr-2 h-4 w-4" />
-              Descarregar CV
+              Download CV
             </a>
 
             <a
               href="#contacto"
               className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-secondary transition-colors"
             >
-              Contacta-me
+              Get in touch
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="relative h-48 w-48 md:h-64 md:w-64 rounded-full overflow-hidden bg-secondary">
             <Image
               src="/foto.jpeg"
-              alt="Foto de Ruben Silva"
+              alt="Ruben Silva"
               fill
               className="object-cover"
               priority
@@ -85,26 +85,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SOBRE MIM ===== */}
+      {/* ===== ABOUT ===== */}
       <section id="sobre" className="scroll-mt-24 space-y-4">
-        <h2 className="text-3xl font-bold">Sobre mim</h2>
+        <h2 className="text-3xl font-bold">About me</h2>
 
         <p className="text-muted-foreground max-w-3xl leading-relaxed">
-          Sou licenciado em Engenharia Informática pelo Instituto Politécnico
-          de Bragança. Ao longo do curso desenvolvi uma base sólida em
-          programação, redes e sistemas operativos, e aprendizagem automática.
-          O meu projeto final centrou-se na caracterização do sensor LiDAR de
-          dispositivos iOS, trabalho que deu origem a dois artigos científicos
-          submetidos a conferências internacionais. Tive ainda experiência
-          internacional através do programa Erasmus, na Croácia, e de um
-          programa BIP, na Lituânia. Procuro agora uma primeira oportunidade
-          onde possa aplicar e desenvolver estas competências.
+          I hold a degree in Computer Engineering from the Polytechnic Institute
+          of Bragança (Portugal). Throughout my studies I built a solid
+          foundation in programming, networks and operating systems, and machine
+          learning. My final-year project focused on characterising the LiDAR
+          sensor on iOS devices, work that led to two scientific papers submitted
+          to international conferences. I also gained international experience
+          through an Erasmus programme in Croatia and a BIP programme in
+          Lithuania. I&apos;m now looking for a first opportunity where I can
+          apply and grow these skills.
         </p>
       </section>
 
-      {/* ===== O QUE FAÇO ===== */}
+      {/* ===== WHAT I DO ===== */}
       <section id="areas" className="scroll-mt-24 space-y-8">
-        <h2 className="text-3xl font-bold">O que faço</h2>
+        <h2 className="text-3xl font-bold">What I do</h2>
 
         <div className="grid gap-8 md:grid-cols-2">
           {areas.map((area, i) => {
@@ -130,25 +130,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PROJETOS (CARROSSEL) ===== */}
+      {/* ===== PROJECTS (CAROUSEL) ===== */}
       <section id="projetos" className="scroll-mt-24 space-y-8">
-        <h2 className="text-3xl font-bold">Projetos</h2>
+        <h2 className="text-3xl font-bold">Projects</h2>
         <ProjetosCarrossel />
       </section>
 
-      {/* ===== COMPETÊNCIAS ===== */}
+      {/* ===== SKILLS ===== */}
       <section id="competencias" className="scroll-mt-24 space-y-6">
-        <h2 className="text-3xl font-bold">Competências</h2>
+        <h2 className="text-3xl font-bold">Skills</h2>
         <Competencias />
       </section>
 
-      {/* ===== CONTACTO ===== */}
+      {/* ===== CONTACT ===== */}
       <section id="contacto" className="scroll-mt-24 space-y-4">
-        <h2 className="text-3xl font-bold">Contacto</h2>
+        <h2 className="text-3xl font-bold">Contact</h2>
 
         <p className="text-muted-foreground max-w-2xl">
-          Estás interessado em trabalhar comigo ou tens alguma pergunta?
-          Envia-me uma mensagem.
+          Interested in working together or have a question? Send me a message.
         </p>
 
         <a
@@ -156,38 +155,38 @@ export default function Home() {
           className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
         >
           <Mail className="mr-2 h-4 w-4" />
-          Enviar email
+          Send email
         </a>
       </section>
     </div>
   );
 }
 
-/* ===== DADOS ===== */
+/* ===== DATA ===== */
 
 const areas = [
   {
     icone: Smartphone,
-    titulo: "Desenvolvimento Mobile & AR",
+    titulo: "Mobile & AR Development",
     descricao:
-      "Aplicações iOS com Swift, SwiftUI e ARKit. Foi nesta área que desenvolvi o meu projeto final, uma app de captura e processamento de dados LiDAR.",
+      "iOS applications with Swift, SwiftUI and ARKit. This is the area where I developed my final-year project, a LiDAR data capture and processing app.",
   },
   {
     icone: Brain,
-    titulo: "Machine Learning & Análise de Dados",
+    titulo: "Machine Learning & Data Analysis",
     descricao:
-      "Aprendizagem automática e análise de dados em Python (NumPy, SciPy, Matplotlib), incluindo modelação e caracterização experimental de resultados.",
+      "Machine learning and data analysis in Python (NumPy, SciPy, Matplotlib), including modelling and experimental characterisation of results.",
   },
   {
     icone: Network,
-    titulo: "Redes & Sistemas",
+    titulo: "Networks & Systems",
     descricao:
-      "Fundamentos de redes, sistemas operativos e administração de sistemas, com experiência em virtualização e self-hosting (Proxmox, VMware) e containers (Docker).",
+      "Fundamentals of networking, operating systems and system administration, with experience in virtualisation and self-hosting (Proxmox, VMware) and containers (Docker).",
   },
   {
     icone: Globe,
-    titulo: "Desenvolvimento Web",
+    titulo: "Web Development",
     descricao:
-      "APIs REST com FastAPI e interfaces em React, com autenticação, gestão de dados e comunicação entre frontend e backend.",
+      "REST APIs with FastAPI and interfaces in React, with authentication, data management and communication between frontend and backend.",
   },
 ];
