@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ruben Silva — Portfólio",
-  description: "Portfólio de Ruben Silva, Engenheiro Informático",
+  title: "Ruben Silva — Portfolio",
+  description: "Portfolio of Ruben Silva, Software Engineer",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
