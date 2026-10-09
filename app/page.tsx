@@ -3,6 +3,8 @@ import Image from "next/image";
 import ProjetosCarrossel from "@/components/projetos-carrossel";
 import Competencias from "@/components/competencias";
 import Learning from "@/components/learning";
+import Papers from"@/components/papers";
+
 
 export default function Home() {
   return (
@@ -141,6 +143,12 @@ export default function Home() {
       <section id="projetos" className="scroll-mt-24 space-y-8">
         <h2 className="text-3xl font-bold">Projects</h2>
         <ProjetosCarrossel />
+      </section>
+
+            {/* ===== PUBLICATIONS ===== */}
+      <section id="publications" className="scroll-mt-24 space-y-8">
+        <h2 className="text-3xl font-bold">Publications</h2>
+        <Papers />
       </section>
 
       {/* ===== SKILLS ===== */}
