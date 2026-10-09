@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, FileDown, ArrowRight, Smartphone, Brain, Networ
 import Image from "next/image";
 import ProjetosCarrossel from "@/components/projetos-carrossel";
 import Competencias from "@/components/competencias";
+import Learning from "@/components/learning";
 
 export default function Home() {
   return (
@@ -100,6 +101,12 @@ export default function Home() {
           Lithuania. I&apos;m now looking for a first opportunity where I can
           apply and grow these skills.
         </p>
+      </section>
+
+      {/* ===== CURRENTLY LEARNING ===== */}
+      <section id="learning" className="scroll-mt-24 space-y-8">
+        <h2 className="text-3xl font-bold">Currently learning</h2>
+        <Learning />
       </section>
 
       {/* ===== WHAT I DO ===== */}
